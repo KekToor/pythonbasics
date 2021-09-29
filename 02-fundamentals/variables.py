@@ -32,7 +32,7 @@ Některé objekty mohou mít explicitně přiřazené jméno, obecně označovan
 #? a) typ objektu
 #? b) identitu objektu (jeho adresu v paměti)
 #? Ukažte to na příkladech proměnných students_count, rating, is_published a vypište výstupy do konzole
-'''
+
 print(type(students_count))
 print(type(rating))
 print(type(is_published))
@@ -42,7 +42,7 @@ print(hex(id(is_published)))
 print(id(students_count))
 print(id(students_count))
 print(id(is_published))
-'''
+
 # Numerické operátory
 # print(10 + 3)
 # print(10 - 3)

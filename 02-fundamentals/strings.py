@@ -160,3 +160,53 @@ funkční kód, tím lepší).
    
    
 '''
+#1.
+import datetime
+print(datetime.datetime.strptime('12.10.2020', '%d.%m.%Y').strftime('%Y-%m-%d'))
+#2.
+import unidecode
+
+def textnapromennou():
+    zaklad = input('Zadejte sousloví, ze kterého chcete utvořit název vhodný pro proměnnou: ')
+    vysledek = unidecode.unidecode(zaklad).lower()
+    vysledek = vysledek.replace(' ','_')
+    print(vysledek)
+
+textnapromennou()
+
+import camelcase
+
+def textnajs():
+    vysledek = camelcase.CamelCase()
+    uprava = input('Zadejte sousloví, ze kterého chcete utvořit název vhodný pro identifikátor v JS: ')
+    uprava = unidecode.unidecode(uprava)
+    konec = vysledek.hump(uprava)
+    konec = konec.replace(' ', '')
+    konec = konec[:1].lower() + konec[1:]
+
+    print(konec)
+
+textnajs()
+
+import keyboard
+
+import random
+
+def generatorhesel():
+    mala = 'abcdefghijklmnopqrstuvwxyz'
+    velka = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    spec = '-/+*.,;'
+    cisla = '0123456789'
+    heslo = ''
+    for i in range (1,11):
+        if i >0 and i < 4:
+            heslo += random.choice(velka)
+        elif i>3 and i<7:
+            heslo += random.choice(mala)
+        elif i == 7:
+            heslo += random.choice(spec)
+        elif i > 7:
+            heslo += random.choice(cisla)
+    print(f'Vaše náhodné heslo je {heslo}')
+
+generatorhesel()
