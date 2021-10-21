@@ -1,0 +1,72 @@
+[{
+        "type": "header",
+        "version": "5.1.1",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "it3_programatori"
+    },
+    {
+        "type": "table",
+        "name": "kniha",
+        "database": "it3_programatori",
+        "data": [{
+                "Kodknihy": "1",
+                "Titul": "Šibeničník",
+                "Popis": "Výbor z poezie francouzského básníka Francoise Villona",
+                "RokVydani": "1987",
+                "Cena": "25.00",
+                "Typ": "poezie"
+            },
+            {
+                "Kodknihy": "3",
+                "Titul": "Má bohéma",
+                "Popis": "Poezie Arthura Rimbauda",
+                "RokVydani": "1977",
+                "Cena": "35.00",
+                "Typ": "poezie"
+            },
+            {
+                "Kodknihy": "4",
+                "Titul": "Hvězdný déšť",
+                "Popis": "Výbor z poezie",
+                "RokVydani": "1989",
+                "Cena": "28.00",
+                "Typ": "poezie"
+            },
+            {
+                "Kodknihy": "5",
+                "Titul": "Doktor Živago",
+                "Popis": "Román z ruského prostředí v letech 1902 až 1940",
+                "RokVydani": "1990",
+                "Cena": "48.00",
+                "Typ": "próza"
+            },
+            {
+                "Kodknihy": "28",
+                "Titul": "Indiánské léto",
+                "Popis": "Reportážní črty které místy přecházejí v báseň nebo v povídku. Aškenazy úřijel do New Yorku jako zpravodaj na zasedání OSN a využil volného času k poznání života Ameriky - dotýká se problémů USA, ale i moderního života vůbec. Jsou zde i prosté lyrické scény - pozorování elektrické krásy s okna hotelu apod. Nad vším je jemný opar smutku.",
+                "RokVydani": "1956",
+                "Cena": "22.00",
+                "Typ": "próza"
+            },
+            {
+                "Kodknihy": "41",
+                "Titul": "Žhář",
+                "Popis": "Hrdinou románu je patnáctiletý syn hostinského Kamil v malém městečku u pruských hranic - prožívá pubertální krizi; připadá si osamocený, nepochopený, touží po sebeuplatnění. V rodině jeho otce Simona však vládne podivný citový chlad - jeho mnohem mladší žena je nešťastná, nepřilne ani ke svým dětem - k sedmnáctileté Elišce. Matka žije jako cizinka ve své rodině a nakonec si vytvoří se zděděného nábytku po rodičích svůj dřívější svět. K Elišce přijde na návštěvu Dora - citově a mravně narušené děvče z internátu, které si  začne s Kamilem eroticky zahrávat a zároveň ho pokořuje - žádá, aby pro ni něco velkého udělal. Kamil, který trpí svou ošklivostí, chce dokázat Doře i sám sobě svou hodnotu, a pro to po náhodném požáru v městečku napíše dva paličské listy. Po obou skutečně následují požáry - zakládají je však 3 kumpáni, kteří zneužili psychózy a vyřizují si své účty. Kamil se matce přiznává a ta pochopí, že děti potřebují lásku a přibližuje se k nim ze své cizoty.",
+                "RokVydani": "1937",
+                "Cena": "20.00",
+                "Typ": "próza"
+            },
+            {
+                "Kodknihy": "42",
+                "Titul": "Nikdynoc",
+                "Popis": "Dcera popraveného zrádce Mia Corverová se ukrývá ve městě postaveném z kostí mrtvého titána. Vydává se na cestu, aby se stala učednicí nejobávanějšího a nejtajemnějšího sdružení vrahů v celé zemi – Rudé církvi. I když vyniká v použití jedů a zbraní, nemůže ji to zachránit před spiknutím, které se na ni v temnotě chystá. Dokáže ho odhalit včas, než ji dostihne, a pomstít se těm, kteří můžou za smrt jejího otce?",
+                "RokVydani": "2019",
+                "Cena": "350.00",
+                "Typ": "próza"
+            }
+        ]
+    }
+]
