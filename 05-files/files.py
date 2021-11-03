@@ -63,24 +63,25 @@ def csvfile_read(path, encoding='utf-8'):
     except FileExistsError as error:
         return f'Soubor nebyl nalezen: {error}'
     except Exception as error:
-        return f'Problém při otevírání souboru: {error}'
+        return f'Problém při otevírání souboru 1: {error}'
     finally:
         file.close()
-    return reader
+    return dict_list
 
-def csvfile_write(path, data = {}, encoding='utf-8'):
+def csvfile_write(path, data = [], encoding='utf-8'):
     try:
-        with open(path, mode='w', encoding=encoding, newline='\n')as file:
-            reader=csv.DictReader(data, delimiter=';', quotechar='"')
-            print(reader)
-            writer = csv.DictWriter(file, fieldnames=data, delimiter=';', quotechar='"')
+        with open(path, mode='w', encoding=encoding, newline='\n') as file:
+            writer = csv.DictWriter(file, fieldnames=list(data[0].keys()))
+            writer.writeheader()
             for row in data:
                 writer.writerow(row)
+
+
     except FileExistsError as error:
         print(f'Soubor nebyl nalezen: {error}')
         return False
     except Exception as error:
-        print(f'Problém při otevírání souboru: {error}')
+        print(f'Problém při otevírání souboru 2: {error} {type(error)}')
         return False
     finally:
         file.close()
@@ -93,5 +94,5 @@ def csvfile_write(path, data = {}, encoding='utf-8'):
 # jsondata = jsonfile_read('./kniha.json')
 # print(jsonfile_write('./novy.json', jsondata))
 
-csv = (csvfile_read('./kniha.csv', 'Windows-1250'))
-print(csvfile_write('./novy.csv', csv))
+data = (csvfile_read('./kniha.csv'))
+print(csvfile_write('./novy.csv', data))

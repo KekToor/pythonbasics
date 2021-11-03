@@ -94,3 +94,16 @@ child3          Linus               2011
 ---------------------------------------------
 Počet záznamů: 3
 '''
+
+my_games = {
+  'game1' : {
+    'name' : 'Dark Souls III',
+    'release' : 2016,
+    'multiplatform' : True,
+    # Recenze pochází z těchto stránek(v tomto pořadí): PCGamer, IGN, Metacritic
+    'reviews' : (94, 95, 89),
+    'designers' : {'Junya Ishizaki', 'Yuya Kimijima', 'Shigeto Hirai', 'Hiroshi Yoshida'},
+    'writer' : [47, {'name':'Hidetaka', 'surname':'Miyazaki', 'nationality':'Japanese'}]
+  }
+
+}

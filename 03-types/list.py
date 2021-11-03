@@ -9,7 +9,6 @@ https://www.youtube.com/watch?v=_uQrJ0TkZlc&list=PLDDhGQzLtPdbS987RIIT8WKwb-L_K2
 https://www.w3schools.com/python/python_lists.asp
 https://macek.sandbox.cz/texty/python-tutorial-cz/tut/node5.html
 '''
-import string
 
 '''
 Příklady různých seznamů v Pythonu:
@@ -57,11 +56,11 @@ print(f'\tVypíše každý druhý prvek ze seznamu letters: {letters[::2]}')
 # ??? 1. cvičení ???
 # Doplňte podle zadání chybějící u následujících tří výpisů
 print('\n1. Cvičení\n***********************************************************************************************')
-print(f'\tVypíše poslední 2 prvky ze seznamu numbers: {numbers[-2:]}')
-print(f'\tVypíše každý sudý prvek ze seznamu letters: {letters[1::2]}')
-print(f'\tVypíše všechny hodnoty z mixed_list kromě dvou posledních: {mixed_list[:-2]}')
-print(f'\tVypíše hodnotu prvku name ze slovníku umístěného v seznamu mixed_list: {mixed_list[4].get("name")}')
-print(f'\tVypíše hodnotu předposledního čísla z listu numbers umístěného v seznamu mixed_list: {mixed_list[3][1][-2]}')
+print(f'\tVypíše poslední 2 prvky ze seznamu numbers: ???')
+print(f'\tVypíše každý sudý prvek ze seznamu letters: ???')
+print(f'\tVypíše všechny hodnoty z mixed_list kromě dvou posledních: ???')
+print(f'\tVypíše hodnotu prvku name ze slovníku umístěného v seznamu mixed_list: ???')
+print(f'\tVypíše hodnotu předposledního čísla z listu numbers umístěného v seznamu mixed_list: ???')
 print('***********************************************************************************************\n')
 # ??? Konec 1. cvičení ???
 
@@ -245,7 +244,7 @@ students = list(filter(lambda item: item[1] < 25, persons))
 
 # Stejná varianta s comprehension
 students = [item for item in persons if item[1] < 25]
-print(f'\tVýběr osob mladších 25 let - použití funkce filter(): {students}\n')
+print(f'\tVýběr osob mladších 25 let - použití funkce filter(): {names}\n')
 
 '''
 Funkce zip() dokáže spojit hodnoty různých seznamů a vytvoří z nich seznam několika množin (set).
@@ -276,7 +275,6 @@ print(f'\tSbalení seznamů do proměnné values: {values}\n')
 
 # ??? 2. cvičení ???
 # a) Vygenerujte do proměnné hundreds seznam čísel v rozsahu 1 až 2000. V seznamu budou pouze čísla dělitelná 200 beze zbytku.
-
 # b) Vygenerujte do proměnné ascii seznam 50 náhodně zvolených znaků - velkých písmen anglické abecedy.
 # c) Vymažte ze seznamu hundreds 3 první a 3 poslední hodnoty.
 # d) Projděte seznam ascii a uložte do proměnné unique (typu list) pouze jen ty znaky, které se v seznamu ascii neopakují.
@@ -286,24 +284,8 @@ print(f'\tSbalení seznamů do proměnné values: {values}\n')
 # import knihovny pro generování náhodných čísel
 from random import randint
 
-print(f'\n*************************************\nCvičení 2\n*************************************\n')
-# a
-hundreds = list(range(1,2001))
-hundreds = [x for x in range(200,2001,200)]
-print(hundreds)
-# b
-import random
-ascii = [x for i in range(50) for x in random.choice(string.ascii_uppercase)]
-print(ascii)
-# c
-hundreds = hundreds[3:-3]
-print(hundreds)
-# d
-unique = [x for x in ascii if (ascii.count(x)==1)]
-print(unique)
-# e
-zipped = zip(hundreds, unique)
-print(list(zipped))
+print(f'\n*************************************\nCvičení 2\n*************************************')
+
 
 
 # ??? 3. cvičení ???
@@ -316,17 +298,3 @@ print(list(zipped))
 # Záznamy budou seřazeny podle věku (sestupně).
 
 print(f'\n*************************************\nCvičení 3\n*************************************')
-
-# b
-women = list(filter(lambda person: person[2] == "žena", persons))
-women = [person for person in persons if person[2]=="žena"]
-for person in women:
-    print(f'{person[0]}\n' + "-" * len(person[0]))
-ipeople = list(filter(lambda person: person[0].count('i') > 0 or person[0].count('I') > 0, persons))
-ipeople = [person for person in persons if person[0].count('i') > 0 or person[0].count('I') > 0]
-ipeople.sort(key=lambda  item: item[1], reverse=True)
-print(ipeople)
-ipeopleCSV = 'index;jmeno;vek;pohlavi'
-for i in range(len(ipeople)):
-    ipeopleCSV+= f'{i};' + ';'.join(map(str, ipeople[i])) + '\n'
-print(ipeopleCSV)
