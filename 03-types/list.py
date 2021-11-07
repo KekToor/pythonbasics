@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=_uQrJ0TkZlc&list=PLDDhGQzLtPdbS987RIIT8WKwb-L_K2
 https://www.w3schools.com/python/python_lists.asp
 https://macek.sandbox.cz/texty/python-tutorial-cz/tut/node5.html
 '''
-
+import string
 '''
 Příklady různých seznamů v Pythonu:
 '''
@@ -284,7 +284,25 @@ print(f'\tSbalení seznamů do proměnné values: {values}\n')
 # import knihovny pro generování náhodných čísel
 from random import randint
 
-print(f'\n*************************************\nCvičení 2\n*************************************')
+print(f'\n*************************************\nCvičení 2\n*************************************\n')
+# a
+hundreds = list(range(1,2001))
+hundreds = [x for x in range(200,2001,200)]
+print(hundreds)
+# b
+import random
+ascii = [x for i in range(50) for x in random.choice(string.ascii_uppercase)]
+print(ascii)
+# c
+hundreds = hundreds[3:-3]
+print(hundreds)
+# d
+unique = [x for x in ascii if (ascii.count(x)==1)]
+print(unique)
+# e
+zipped = zip(hundreds, unique)
+print(list(zipped))
+
 
 
 
@@ -296,5 +314,27 @@ print(f'\n*************************************\nCvičení 2\n******************
 # obsahující ve jméně písmeno "i". Obsah listu ipeople poté převeďte do podoby řetězce, který bude odpovídat struktuře csv souboru.
 # Kromě jména, věku a pohlaví v něm budou vypsána i čísla indexů (jako 1. sloupec). Oddělovačem bude středník.
 # Záznamy budou seřazeny podle věku (sestupně).
-
 print(f'\n*************************************\nCvičení 3\n*************************************')
+
+print(persons)
+
+pridaneosoby = [('Hilda', 42, 'žena'),('Berta', 33, 'žena'),('Petr', 41, 'muž'), ('Filip', 27, 'Muž')]
+
+for item in pridaneosoby:
+    persons.append(item)
+print(persons)
+
+women = list(filter(lambda person: person[2] == "žena", persons))
+women = [person for person in persons if person[2]=="žena"]
+for person in women:
+    print(f'{person[0]}\n' + "-" * len(person[0]))
+ipeople = list(filter(lambda person: person[0].count('i') > 0 or person[0].count('I') > 0, persons))
+ipeople = [person for person in persons if person[0].count('i') > 0 or person[0].count('I') > 0]
+ipeople.sort(key=lambda  item: item[1], reverse=True)
+print(ipeople)
+ipeopleCSV = 'index;jmeno;vek;pohlavi'
+for i in range(len(ipeople)):
+    ipeopleCSV+= f'{i};' + ';'.join(map(str, ipeople[i])) + '\n'
+print(ipeopleCSV)
+
+

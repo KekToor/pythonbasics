@@ -1,30 +1,30 @@
-Vytvoøte vlastní modul structures.py, kterı zatím bude obsahovat funkci charFrequency().
-Jejím úkolem bude na základì pøedaného øetìzce (vìty) provést analızu èetnosti
-vıskytu jednotlivıch znakù.  
-Vısledkem funkce by mìl bıt následující vıstup ve formì seøazeného seznamu n-tic (list of tuples): 
+VytvoÅ™te vlastnÃ­ modul structures.py, kterÃ½ zatÃ­m bude obsahovat funkci charFrequency().
+JejÃ­m Ãºkolem bude na zÃ¡kladÄ› pÅ™edanÃ©ho Å™etÄ›zce (vÄ›ty) provÃ©st analÃ½zu Äetnosti
+vÃ½skytu jednotlivÃ½ch znakÅ¯.  
+VÃ½sledkem funkce by mÄ›l bÃ½t nÃ¡sledujÃ­cÃ­ vÃ½stup ve formÄ› seÅ™azenÃ©ho seznamu n-tic (list of tuples): 
 
 
-Vìta: Tøi sta tøicet tøi støíbrnıch støíkaèek pøestøíkalo pøes tøi sta tøicet tøi støíbrnıch støech.
-Èetnost vıskytu písmen:
+VÄ›ta: TÅ™i sta tÅ™icet tÅ™i stÅ™Ã­brnÃ½ch stÅ™Ã­kaÄek pÅ™estÅ™Ã­kalo pÅ™es tÅ™i sta tÅ™icet tÅ™i stÅ™Ã­brnÃ½ch stÅ™ech.
+ÄŒetnost vÃ½skytu pÃ­smen:
 -----------------------
 [('t', 14),
- ('ø', 13),
+ ('Å™', 13),
  (' ', 13),
  ('s', 8),
  ('i', 6),
  ('e', 6),
  ('c', 5),
  ('a', 4),
- ('í', 4),
+ ('Ã­', 4),
  ('h', 3),
  ('k', 3),
  ('b', 2),
  ('r', 2),
  ('n', 2),
- ('ı', 2),
+ ('Ã½', 2),
  ('p', 2),
  ('T', 1),
- ('è', 1),
+ ('Ä', 1),
  ('l', 1),
  ('o', 1),
  ('.', 1)]

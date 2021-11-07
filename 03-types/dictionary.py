@@ -8,9 +8,9 @@ Každému klíči je přiřazena jedna hodnota.
 # Collection which is unordered, changeable and indexed.
 # In Python dictionaries are written with curly brackets, and they have keys and values.
 car = {
-  'brand': 'Ford',
-  'model': 'Mustang',
-  'year': 1964
+    'brand': 'Ford',
+    'model': 'Mustang',
+    'year': 1964
 }
 
 point = {'x': 1, 'y': 10}
@@ -60,18 +60,18 @@ print(f'common: {common}')
 
 # Nested dictionary - vnořené slovníky
 myfamily = {
-  'child1' : {
-    'name' : 'Emil',
-    'year' : 2004
-  },
-  'child2' : {
-    'name' : 'Tobias',
-    'year' : 2007
-  },
-  'child3' : {
-    'name' : 'Linus',
-    'year' : 2011
-  }
+    'child1': {
+        'name': 'Emil',
+        'year': 2004
+    },
+    'child2': {
+        'name': 'Tobias',
+        'year': 2007
+    },
+    'child3': {
+        'name': 'Linus',
+        'year': 2011
+    }
 }
 print(f'Nested dictionary myfamily: {myfamily}')
 
@@ -96,14 +96,57 @@ Počet záznamů: 3
 '''
 
 my_games = {
-  'game1' : {
-    'name' : 'Dark Souls III',
-    'release' : 2016,
-    'multiplatform' : True,
-    # Recenze pochází z těchto stránek(v tomto pořadí): PCGamer, IGN, Metacritic
-    'reviews' : (94, 95, 89),
-    'designers' : {'Junya Ishizaki', 'Yuya Kimijima', 'Shigeto Hirai', 'Hiroshi Yoshida'},
-    'writer' : [47, {'name':'Hidetaka', 'surname':'Miyazaki', 'nationality':'Japanese'}]
-  }
-
+    'game1': {
+        'name': 'Dark Souls III',
+        'release': 2016,
+        'multiplatform': True,
+        # Recenze pochází z těchto stránek(v tomto pořadí): PCGamer, IGN, Metacritic
+        'reviews': (94, 95, 89),
+        'designers': {'Junya Ishizaki', 'Yuya Kimijima', 'Shigeto Hirai', 'Hiroshi Yoshida'},
+        'writer': [47, {'name': 'Hidetaka', 'surname': 'Miyazaki', 'nationality': 'Japanese'}]
+    },
+    'game2': {
+        'name': 'Detroit: Become Human',
+        'release': 2018,
+        'multiplatform': True,
+        'reviews': (61, 80, 78),
+        'designers': {'Simon Wasselin'},
+        'writer': [52, {'name': 'David', 'surname': 'Cage', 'nationality': 'French'}]
+    },
+    'game3': {
+        'name': 'The Witcher 3: Wild Hunt',
+        'release': 2015,
+        'multiplatform': True,
+        'reviews': (92, 93, 93),
+        'designers': {'Damien Monnier', 'Michał Dobrowolski'},
+        'writer': [45, {'name': 'Marcin', 'surname': 'Blacha', 'nationality': 'Polish'}]
+    }
 }
+print(my_games)
+del my_games['game3']
+print('---------------------------------------------')
+print(my_games)
+print('---------------------------------------------')
+slovnikadd = {'game4': {
+        'name': 'World Of Warcraft',
+        'release': 2004,
+        'multiplatform': False,
+        'reviews': (80, 80, 83),
+        'designers': {'Jeff Kaplan', 'Rob Pardo', 'Tom Chilton'},
+        'writer': [57, {'name': 'Christie', 'surname': 'Golden', 'nationality': 'American'}]
+    }}
+my_games.update(slovnikadd)
+print(my_games)
+print('---------------------------------------------')
+import pandas as pd
+
+def tabulka(slovnik = {}):
+    print('Slovník my_games')
+    print('------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------')
+    pd.set_option('display.max_columns', None)
+    pd.set_option('display.width', None)
+    pd.set_option('display.max_colwidth', -1)
+    upraveno = pd.DataFrame(slovnik).T
+    print(upraveno)
+
+tabulka(my_games)
